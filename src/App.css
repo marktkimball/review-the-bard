@@ -1,11 +1,17 @@
+:root {
+  --color-poor: #e53935;
+  --color-mixed: #ffc107;
+  --color-positive: #43a047;
+}
+
 .app-header {
+  align-items: center;
   background-color: #282c34;
+  color: #fff;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
   font-size: calc(10px + 2vmin);
-  color: #fff;
+  justify-content: center;
 }
 
 .main-content {
@@ -13,17 +19,17 @@
 }
 
 .reviews-summary-container {
-  border-top: 1px solid #cfd8dc;
   border-bottom: 1px solid #cfd8dc;
-  padding: 2.4rem 0;
+  border-top: 1px solid #cfd8dc;
   display: grid;
-  grid-template-columns: 1fr 1fr;
   grid-gap: 3.2rem;
+  grid-template-columns: 1fr 1fr;
+  padding: 2.4rem 0;
 }
 
 .reviews-summary {
-  display: flex;
   align-items: flex-start;
+  display: flex;
   margin-bottom: 1.6rem;
 }
 
@@ -40,8 +46,8 @@
 }
 
 .review-type:hover {
-  text-decoration: underline;
   cursor: pointer;
+  text-decoration: underline;
 }
 
 .remove-filter-button {
@@ -53,7 +59,7 @@
   cursor: pointer;
   font-size: 0.8rem;
   font-weight: bold;
-  margin-left: 112px;
+  margin: 1.2rem 0;
   opacity: 0;
   padding: 0.4rem 1.2rem;
   position: relative;
@@ -87,8 +93,8 @@
 
 .profile {
   display: grid;
-  grid-template-columns: 1fr 3fr;
   grid-gap: 1.2rem;
+  grid-template-columns: 1fr 3fr;
 }
 
 .profile-title {
@@ -101,20 +107,21 @@
 
 .reviews-grid {
   display: grid;
-  grid-template-columns: 1fr 1fr;
   grid-gap: 1.2rem;
+  grid-template-columns: 1fr 1fr;
   margin: 3.6rem 0 0 0;
 }
 
 .review {
+  border: 1px solid transparent;
   border-radius: 3px;
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
   padding: 1.2rem;
 }
 
 .review-heading {
-  display: flex;
   align-items: center;
+  display: flex;
 }
 
 .review-metadata {
@@ -123,8 +130,8 @@
 }
 
 .review-text {
-  font-style: italic;
   font-size: 1.2rem;
+  font-style: italic;
 }
 
 .review-author {
@@ -132,16 +139,16 @@
 }
 
 .review-rating {
+  align-items: center;
   border-radius: 3px;
   color: #fff;
+  display: flex;
   font-size: 1.6rem;
   font-weight: bold;
-  width: 2.2rem;
   height: 2rem;
-  padding: 0.8rem;
-  display: flex;
-  align-items: center;
   justify-content: center;
+  padding: 0.8rem;
+  width: 2.2rem;
 }
 
 .average-rating {
@@ -150,15 +157,33 @@
 }
 
 .background-poor {
-  background: #e53935;
+  background: var(--color-poor);
 }
 
 .background-mixed {
-  background: #ffc107;
+  background: var(--color-mixed);
 }
 
 .background-positive {
-  background: #43a047;
+  background: var(--color-positive);
+}
+
+.review-poor {
+  border-color: #ffcdd2;
+  box-shadow: 0 3px 6px rgba(229, 57, 53, 0.16),
+    0 3px 6px rgba(229, 57, 53, 0.23);
+}
+
+.review-mixed {
+  border-color: #ffecb3;
+  box-shadow: 0 3px 6px rgba(255, 193, 7, 0.16),
+    0 3px 6px rgba(255, 193, 7, 0.23);
+}
+
+.review-positive {
+  border-color: #c8e6c9;
+  box-shadow: 0 3px 6px rgba(67, 160, 72, 0.16),
+    0 3px 6px rgba(67, 160, 72, 0.23);
 }
 
 .text-bold {
@@ -166,27 +191,49 @@
 }
 
 .chart {
-  position: relative;
   height: 3px;
-  width: 200px;
   margin: 0.4rem 0;
+  position: relative;
+  width: 200px;
 }
 
 .chart-background {
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
   background: #eeeeee;
+  bottom: 0;
+  left: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
 }
 
 .chart-progress {
   height: 3px;
+  left: 0;
   position: absolute;
   top: 0;
-  left: 0;
   z-index: 1;
+}
+
+.sort-container {
+  align-items: center;
+  display: flex;
+  margin: 1.2rem 0;
+}
+
+.sort-header {
+  margin: 0 0.8rem 0 0;
+}
+
+.sort-option {
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  color: #757575;
+  cursor: pointer;
+  margin: 0 0.8rem;
+}
+
+.sort-option:hover {
+  text-decoration: underline;
 }
 
 @media screen and (max-width: 768px) {
