@@ -1,6 +1,6 @@
-# Getting Started with Create React App
+# Review the Bard
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Deployed at: [https://kind-ride-f38922.netlify.app/](https://kind-ride-f38922.netlify.app/).
 
 ## Available Scripts
 
