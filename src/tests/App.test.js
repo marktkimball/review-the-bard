@@ -3,6 +3,7 @@ import App from "../components/App";
 
 test("renders the correct title", () => {
   render(<App />);
-  const titleElement = screen.getByText(/Review the Bard/i);
+  const titleElement = screen.getByText("Review the Bard");
+
   expect(titleElement).toBeInTheDocument();
 });

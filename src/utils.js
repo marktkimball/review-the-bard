@@ -12,7 +12,7 @@ export const getRatingType = (rating) => {
   return RATING_POSITIVE;
 };
 
-export const getReviewsData = (reviews) =>
+export const getReviewsData = (reviews = []) =>
   reviews.reduce(
     ({ total, ...rest }, { rating }) => {
       const normalizedRating = rating * 20;
