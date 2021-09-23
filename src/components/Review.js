@@ -8,7 +8,7 @@ export const Review = ({ review }) => {
   const ratingLevel = getRatingType(normalizedRating);
 
   return (
-    <div className={`review review-${ratingLevel}`}>
+    <div className="review">
       <div className="review-heading">
         <span className={`review-rating background-${ratingLevel}`}>
           {normalizedRating}
